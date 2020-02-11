@@ -15,7 +15,9 @@ class Image extends Component
     {
         return (
             <div>
-                Image
+                {
+                    this.props.value
+                }
             </div>
         );
     }

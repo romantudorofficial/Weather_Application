@@ -21,16 +21,16 @@ class Frame extends Component
     {
         return (
             <div>
-                <Text />
-                <Information />
-                <Image />
-                <Information />
-                <Temperature />
-                <Temperature />
-                <Temperature />
-                <Text />
-                <Image />
-                <Information />
+                <Text value = "Hong Kong" />
+                <Information value = "Monday, 01:20 AM" />
+                <Image value = "../../images/Crescent Moon Icon.png" />
+                <Information value = "Clear" />
+                <Temperature value = "23 degrees" />
+                <Temperature value = "28 degrees" />
+                <Temperature value = "17 degrees" />
+                <Text value = "Wind Speed" />
+                <Image value = "../../images/Wind Icon.png" />
+                <Information value = "32.4 m/s" />
             </div>
         );
     }

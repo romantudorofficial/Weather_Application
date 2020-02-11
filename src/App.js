@@ -1,9 +1,9 @@
 /* IMPORTS */
 
-// React and Component
+// React
 import React from 'react';
 
-// The Component
+// The Frame Component
 import Frame from './components/frame/frame.component';
 
 // The Stylesheet
@@ -21,5 +21,5 @@ function App ()
 
 
 
-// Export the Class
+// Export the Function
 export default App;

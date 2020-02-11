@@ -15,7 +15,9 @@ class Information extends Component
     {
         return (
             <div>
-                Information
+                {
+                    this.props.value
+                }
             </div>
         );
     }

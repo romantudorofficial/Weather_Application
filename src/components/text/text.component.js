@@ -15,7 +15,9 @@ class Text extends Component
     {
         return (
             <div>
-                Text
+                {
+                    this.props.value
+                }
             </div>
         );
     }

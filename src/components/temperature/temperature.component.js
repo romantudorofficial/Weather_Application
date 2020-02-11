@@ -15,7 +15,9 @@ class Temperature extends Component
     {
         return (
             <div>
-                Temperature
+                {
+                    this.props.value
+                }
             </div>
         );
     }
