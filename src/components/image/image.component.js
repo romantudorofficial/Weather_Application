@@ -14,11 +14,7 @@ class Image extends Component
     render ()
     {
         return (
-            <div>
-                {
-                    this.props.value
-                }
-            </div>
+            <img src = {this.props.value} />
         );
     }
 }
