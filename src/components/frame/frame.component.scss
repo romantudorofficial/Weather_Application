@@ -1,18 +1,65 @@
 // Colours
-$background_color: #651e3e;
-$border_color: #360000;
+$background_color: #22425c;
+$border_color: #202022;
 
 
 
 .frame
 {
     background: $background_color;
-    width: 25%;
-    height: 800px;
-    margin: 50px auto 0px auto;
-
     border-style: solid;
     border-width: 5px;
     border-radius: 30px;
     border-color: $border_color;
+
+    .city
+    {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .date
+    {
+
+    }
+
+    .sky_image
+    {
+
+    }
+
+    .sky
+    {
+
+    }
+
+    .temperature_big
+    {
+
+    }
+
+    .temperature_small_1
+    {
+        
+    }
+
+    .temperature_small_2
+    {
+        
+    }
+
+    .wind_speed_text
+    {
+
+    }
+
+    .wind_image
+    {
+
+    }
+
+    .wind_speed
+    {
+
+    }
 }

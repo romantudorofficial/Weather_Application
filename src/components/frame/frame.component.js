@@ -1,20 +1,17 @@
-/* IMPORTS */
-
-// React and Component
+// Import React and Component
 import React, {Component} from 'react';
 
-// The Components
+// Import the Components
 import Information from '../information/information.component';
 import Image from '../image/image.component';
 import Temperature from '../temperature/temperature.component';
 import Text from '../text/text.component';
 
-// The Stylesheet
+// Import the Stylesheet
 import './frame.component.scss';
 
 
 
-// The Frame class
 class Frame extends Component
 {
     constructor (props)
@@ -51,16 +48,16 @@ class Frame extends Component
 
         return (
             <div className = "frame">
-                <Text value = "Hong Kong" />
-                <Information value = "Monday, 01:20 AM" />
-                <Image value = "../../images/crescent_moon_icon.png" />
-                <Information value = "Clear" />
-                <Temperature value = {all_data} />
-                <Temperature value = "28 degrees" />
-                <Temperature value = "17 degrees" />
-                <Text value = "Wind Speed" />
-                <Image value = "/images/Wind Icon.png" />
-                <Information value = "32.4 m/s" />
+                <Text value = "Hong Kong" className = "city" />
+                <Information value = "Monday, 01:20 AM" className = "date" />
+                <Image value = "../../images/crescent_moon_icon.png" className = "sky_image" />
+                <Information value = "Clear" className = "sky" />
+                <Temperature value = "20 degrees" className = "temperature_big" />
+                <Temperature value = "28 degrees" className = "temperature_small_1" />
+                <Temperature value = "17 degrees" className = "temperature_small_2" />
+                <Text value = "Wind Speed" className = "wind_speed_text" />
+                <Image value = "/images/Wind Icon.png" className = "wind_image" />
+                <Information value = "32.4 m/s" className = "wind_speed" />
             </div>
         );
     }
@@ -68,5 +65,4 @@ class Frame extends Component
 
 
 
-// Export the Class
 export default Frame;

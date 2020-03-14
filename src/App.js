@@ -1,25 +1,21 @@
-/* IMPORTS */
-
-// React
+// Import React
 import React from 'react';
 
-// The Frame Component
+// Import the Frame Component
 import Frame from './components/frame/frame.component';
 
-// The Stylesheet
+// Import the Stylesheet
 import './App.css';
 
 
 
-// The App function
 function App ()
 {
     return (
-        <Frame />
+        <Frame className = "frame" />
     );
 }
 
 
 
-// Export the Function
 export default App;
