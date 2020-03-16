@@ -14,7 +14,7 @@ class Text extends Component
     render ()
     {
         return (
-            <div className = "text">
+            <div className = {this.props.className}>
                 {this.props.value}
             </div>
         );

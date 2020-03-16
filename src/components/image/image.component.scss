@@ -1,6 +1,22 @@
-.img
+.image
 {
-    display: block;
-    width: 50px;
-    margin: 0 auto;
+    color: white;
+    font-size: 40px;
+    margin-left: 30px;
+}
+
+
+
+.sky_image
+{
+    transform: rotate(-20deg);
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+
+.wind_image
+{
+
 }

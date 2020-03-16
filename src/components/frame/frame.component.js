@@ -10,6 +10,9 @@ import Text from '../text/text.component';
 // Import the Stylesheet
 import './frame.component.scss';
 
+// Import the FontAwesome Icons
+import {faMoon, faWind} from '@fortawesome/free-solid-svg-icons';
+
 
 
 class Frame extends Component
@@ -48,16 +51,16 @@ class Frame extends Component
 
         return (
             <div className = "frame">
-                <Text value = "Hong Kong" className = "city" />
-                <Information value = "Monday, 01:20 AM" className = "date" />
-                <Image value = "../../images/crescent_moon_icon.png" className = "sky_image" />
-                <Information value = "Clear" className = "sky" />
-                <Temperature value = "20 degrees" className = "temperature_big" />
-                <Temperature value = "28 degrees" className = "temperature_small_1" />
-                <Temperature value = "17 degrees" className = "temperature_small_2" />
-                <Text value = "Wind Speed" className = "wind_speed_text" />
-                <Image value = "/images/Wind Icon.png" className = "wind_image" />
-                <Information value = "32.4 m/s" className = "wind_speed" />
+                <Text value = "Hong Kong" className = "text city" />
+                <Information value = "Monday, 01:20 AM" className = "information date" />
+                <Image icon = {faMoon} className = "image sky_image" />
+                <Information value = "Clear" className = "information sky" />
+                <Temperature value = "20&deg;" className = "temperature temperature_big" />
+                <Temperature value = "28&deg;" className = "temperature temperature_small_1" />
+                <Temperature value = "17&deg;" className = "temperature temperature_small_2" />
+                <Text value = "Wind Speed" className = "text wind_speed_text" />
+                <Image icon = {faWind} className = "image wind_image" />
+                <Information value = "32.4 m/s" className = "information wind_speed" />
             </div>
         );
     }

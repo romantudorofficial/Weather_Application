@@ -14,10 +14,8 @@ class Information extends Component
     render ()
     {
         return (
-            <div className = "information">
-                {
-                    this.props.value
-                }
+            <div className = {this.props.className}>
+                {this.props.value}
             </div>
         );
     }
