@@ -11,4 +11,19 @@ $border_color: #202022;
     border-width: 5px;
     border-radius: 30px;
     border-color: $border_color;
+
+    .temperatures
+    {
+        display: flex;
+
+        .small_temperatures
+        {
+            margin-top: 74px;
+        }
+    }
+
+    .wind_speed_container
+    {
+        display: flex;
+    }
 }

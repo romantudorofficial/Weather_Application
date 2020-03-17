@@ -55,12 +55,19 @@ class Frame extends Component
                 <Information value = "Monday, 01:20 AM" className = "information date" />
                 <Image icon = {faMoon} className = "image sky_image" />
                 <Information value = "Clear" className = "information sky" />
-                <Temperature value = "20&deg;" className = "temperature temperature_big" />
-                <Temperature value = "28&deg;" className = "temperature temperature_small_1" />
-                <Temperature value = "17&deg;" className = "temperature temperature_small_2" />
+                <div className = "temperatures">
+                    <Temperature value = "20&deg;" className = "temperature temperature_big" />
+                    <div className = "small_temperatures">
+                        <Temperature value = "28&deg; C" className = "temperature temperature_small_1" />
+                        <hr />
+                        <Temperature value = "17&deg; C" className = "temperature temperature_small_2" />
+                    </div>
+                </div>
                 <Text value = "Wind Speed" className = "text wind_speed_text" />
-                <Image icon = {faWind} className = "image wind_image" />
-                <Information value = "32.4 m/s" className = "information wind_speed" />
+                <div className = "wind_speed_container">
+                    <Image icon = {faWind} className = "image wind_image" />
+                    <Information value = "32.4 m/s" className = "information wind_speed" />
+                </div>
             </div>
         );
     }
