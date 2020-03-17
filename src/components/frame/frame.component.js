@@ -6,12 +6,13 @@ import Information from '../information/information.component';
 import Image from '../image/image.component';
 import Temperature from '../temperature/temperature.component';
 import Text from '../text/text.component';
+import Button from '../button/button.component';
 
 // Import the Stylesheet
 import './frame.component.scss';
 
 // Import the FontAwesome Icons
-import {faMoon, faWind} from '@fortawesome/free-solid-svg-icons';
+import {faWind, faCloudRain, faCloud, faSun, faSnowflake, faGrinStars} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -23,16 +24,25 @@ class Frame extends Component
         this.state =
         {
             data: null,
-            checkData: false
+            checkData: false,
+            city: "Bucharest"
         };
         this.getData.bind (this.getData);
+        this.changeCity.bind (this.changeCity);
     }
     
     getData = () =>
     {
-        fetch ('http://api.openweathermap.org/data/2.5/weather?q=Paris&APPID=b877cc138ceeb7015615b7b122be7958&units=metric')
+        fetch ('http://api.openweathermap.org/data/2.5/weather?q=' + this.state.city + '&APPID=b877cc138ceeb7015615b7b122be7958&units=metric')
         .then (response => response.json())
         .then (data => this.setState({data: data, checkData: true}));
+    }
+
+    changeCity = (e) =>
+    {
+        this.setState ({city: e.currentTarget.textContent});
+        // console.log (this.state.city);
+        this.getData ();
     }
 
     componentDidMount ()
@@ -42,31 +52,70 @@ class Frame extends Component
 
     render ()
     {
-        let all_data;
+        let city_name, date, typeOfWeather, temperature, temperature_max, temperature_min, wind_speed;
+        let icon;
         
-        if (this.state.isLoaded)
+        if (this.state.checkData)
         {
-            all_data = this.state.data.main.temp;
+            city_name = this.state.data.name;
+            // date = 
+            typeOfWeather = this.state.data.weather[0].main;
+            temperature = Math.floor(this.state.data.main.temp);
+            temperature_max = this.state.data.main.temp_max;
+            temperature_min = this.state.data.main.temp_min;
+            wind_speed = this.state.data.wind.speed;
+            // console.log(this.state.data.main.temp);
+            
+            switch (typeOfWeather)
+            {
+                case "Clear":
+                    icon = faSun;
+                    break;
+                case "Clouds":
+                    icon = faCloud;
+                    break;
+                case "Snow":
+                    icon = faSnowflake;
+                    break;
+                case "Rain":
+                    icon = faCloudRain;
+                    break;
+                default:
+                    icon = faGrinStars;
+            }
         }
+
+        //console.log(this.state.data);
 
         return (
             <div className = "frame">
-                <Text value = "Hong Kong" className = "text city" />
+                <div className = "cities">
+                    <Button city = "Cluj-Napoca" onButtonClick = {this.changeCity} />
+                    <Button city = "Vatra Dornei" onButtonClick = {this.changeCity} />
+                    <Button city = "Brodina" onButtonClick = {this.changeCity} />
+                    <Button city = "Munich" onButtonClick = {this.changeCity} />
+                    <Button city = "Bucharest" onButtonClick = {this.changeCity} />
+                    <Button city = "Vienna" onButtonClick = {this.changeCity} />
+                    <Button city = "Los Angeles" onButtonClick = {this.changeCity} />
+                    <Button city = "London" onButtonClick = {this.changeCity} />
+                    <Button city = "Moscow" onButtonClick = {this.changeCity} />
+                </div>
+                <Text value = {city_name} className = "text city" />
                 <Information value = "Monday, 01:20 AM" className = "information date" />
-                <Image icon = {faMoon} className = "image sky_image" />
-                <Information value = "Clear" className = "information sky" />
+                <Image icon = {icon} className = "image sky_image" />
+                <Information value = {typeOfWeather} className = "information sky" />
                 <div className = "temperatures">
-                    <Temperature value = "20&deg;" className = "temperature temperature_big" />
+                    <Temperature value = {temperature} className = "temperature temperature_big" />
                     <div className = "small_temperatures">
-                        <Temperature value = "28&deg; C" className = "temperature temperature_small_1" />
+                        <Temperature value = {temperature_max} className = "temperature temperature_small_1" />
                         <hr />
-                        <Temperature value = "17&deg; C" className = "temperature temperature_small_2" />
+                        <Temperature value = {temperature_min} className = "temperature temperature_small_2" />
                     </div>
                 </div>
                 <Text value = "Wind Speed" className = "text wind_speed_text" />
                 <div className = "wind_speed_container">
                     <Image icon = {faWind} className = "image wind_image" />
-                    <Information value = "32.4 m/s" className = "information wind_speed" />
+                    <Information value = {wind_speed} className = "information wind_speed" />
                 </div>
             </div>
         );
