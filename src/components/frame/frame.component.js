@@ -40,52 +40,62 @@ class Frame extends Component
 
     changeCity = (e) =>
     {
-        this.setState ({city: e.currentTarget.textContent});
-        // console.log (this.state.city);
+        this.setState ({city: e.currentTarget.textContent}, () => this.getData());
+        // this.getData ();
+    }
+
+    componentDidMount = () =>
+    {
         this.getData ();
     }
 
-    componentDidMount ()
+    getDate = () =>
     {
-        this.getData ();
+        let date, day, month, year, hours, minutes, seconds;
+        date = new Date ();
+        day = String (date.getDate()).padStart(2, '0');
+        month = String (date.getMonth() + 1).padStart(2, '0');
+        year = date.getFullYear();
+        hours = String (date.getHours()).padStart(2, '0');
+        minutes = String (date.getMinutes()).padStart(2, '0');
+        seconds = String (date.getSeconds()).padStart(2, '0');
+        date = day + '/' + month + '/' + year + ', ' + hours + ':' + minutes + ':' + seconds;
+        return date;
     }
 
     render ()
     {
-        let city_name, date, typeOfWeather, temperature, temperature_max, temperature_min, wind_speed;
-        let icon;
+        let city_name, typeOfWeather, temperature, temperature_max, temperature_min, wind_speed;
+        let date, icon;
         
         if (this.state.checkData)
         {
             city_name = this.state.data.name;
-            // date = 
             typeOfWeather = this.state.data.weather[0].main;
             temperature = Math.floor(this.state.data.main.temp);
-            temperature_max = this.state.data.main.temp_max;
-            temperature_min = this.state.data.main.temp_min;
+            temperature_max = Math.floor(this.state.data.main.temp_max);
+            temperature_min = Math.floor(this.state.data.main.temp_min);
             wind_speed = this.state.data.wind.speed;
-            // console.log(this.state.data.main.temp);
-            
-            switch (typeOfWeather)
-            {
-                case "Clear":
-                    icon = faSun;
-                    break;
-                case "Clouds":
-                    icon = faCloud;
-                    break;
-                case "Snow":
-                    icon = faSnowflake;
-                    break;
-                case "Rain":
-                    icon = faCloudRain;
-                    break;
-                default:
-                    icon = faGrinStars;
-            }
+            date = this.getDate();
         }
 
-        //console.log(this.state.data);
+        switch (typeOfWeather)
+        {
+            case "Clear":
+                icon = faSun;
+                break;
+            case "Clouds":
+                icon = faCloud;
+                break;
+            case "Snow":
+                icon = faSnowflake;
+                break;
+            case "Rain":
+                icon = faCloudRain;
+                break;
+            default:
+                icon = faGrinStars;
+        }
 
         return (
             <div className = "frame">
@@ -101,7 +111,7 @@ class Frame extends Component
                     <Button city = "Moscow" onButtonClick = {this.changeCity} />
                 </div>
                 <Text value = {city_name} className = "text city" />
-                <Information value = "Monday, 01:20 AM" className = "information date" />
+                <Information value = {date} className = "information date" />
                 <Image icon = {icon} className = "image sky_image" />
                 <Information value = {typeOfWeather} className = "information sky" />
                 <div className = "temperatures">

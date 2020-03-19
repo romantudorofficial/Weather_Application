@@ -1,12 +1,15 @@
 // Colours
 $background_color: #22425c;
+$background_color_1: rgba(162, 2, 63, 0.8);
+$background_color_2: rgba(231, 62, 68, 0.8);
+$background_color_3: rgba(255, 129, 79, 0.8);
 $border_color: #202022;
 
 
 
 .frame
 {
-    background: rgba(34, 66, 92, 0.8);
+    background-image: linear-gradient(210deg, $background_color_1 10%, $background_color_2 60%, $background_color_3 100%);
     border-style: solid;
     border-width: 5px;
     border-radius: 30px;
