@@ -65,9 +65,10 @@ class Frame extends Component
 
     render ()
     {
-        let city_name, typeOfWeather, temperature, temperature_max, temperature_min, wind_speed;
-        let date, icon;
-        
+        let city_name, typeOfWeather, temperature, temperature_max, temperature_min, wind_speed, date, icon;
+        let temperature_max_string, temperature_min_string, temperature_max_length, temperature_min_length;
+        let small_temperatures_flag = false;
+
         if (this.state.checkData)
         {
             city_name = this.state.data.name;
@@ -77,6 +78,13 @@ class Frame extends Component
             temperature_min = Math.floor(this.state.data.main.temp_min);
             wind_speed = this.state.data.wind.speed;
             date = this.getDate();
+
+            temperature_max_string = temperature_max.toString();
+            temperature_min_string = temperature_min.toString();
+            temperature_max_length = temperature_max_string.length;
+            temperature_min_length = temperature_min_string.length;
+            if (temperature_max_length == 1 && temperature_min_length == 1)
+                small_temperatures_flag = true;
         }
 
         switch (typeOfWeather)
@@ -115,11 +123,17 @@ class Frame extends Component
                 <Image icon = {icon} className = "image sky_image" />
                 <Information value = {typeOfWeather} className = "information sky" />
                 <div className = "temperatures">
-                    <Temperature value = {temperature} className = "temperature temperature_big" />
+                    <Temperature value = {temperature + "°"} className = "temperature temperature_big" />
                     <div className = "small_temperatures">
-                        <Temperature value = {temperature_max} className = "temperature temperature_small_1" />
-                        <hr />
-                        <Temperature value = {temperature_min} className = "temperature temperature_small_2" />
+                        <div className = "small_temperatures_group">
+                            <Temperature value = {temperature_max} className = "temperature temperature_small" />
+                            <Text value = "°C" className = "text degree_celsius" />
+                        </div>
+                        <hr className = "temperatures_line" />
+                        <div className = "small_temperatures_group">
+                            <Temperature value = {temperature_min} className = "temperature temperature_small" />
+                            <Text value = "°C" className = "text degree_celsius" />
+                        </div>
                     </div>
                 </div>
                 <Text value = "Wind Speed" className = "text wind_speed_text" />

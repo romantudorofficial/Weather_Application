@@ -7,39 +7,17 @@
 
 .temperature_big
 {
-    width: 250px;
+    width: 260px;
     font-size: 170px;
     margin-left: 40px;
     margin-right: 40px;
 }
 
 
-.temperature_big:after
-{
-    content: "°";
-}
 
-
-.temperature_small_1
+.temperature_small
 {
+    width: 38px;
     font-size: 28px;
-}
-
-
-.temperature_small_1:after
-{
-    content: " °C";
-}
-
-
-
-.temperature_small_2
-{
-    font-size: 28px;
-}
-
-
-.temperature_small_2:after
-{
-    content: " °C";
+    text-align: right;
 }

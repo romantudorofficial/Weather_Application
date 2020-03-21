@@ -31,6 +31,17 @@ $border_color: #202022;
         .small_temperatures
         {
             margin-top: 74px;
+
+            .small_temperatures_group
+            {
+                display: flex;
+            }
+
+            .temperatures_line
+            {
+                width: 72px;
+                margin-left: 7px;
+            }
         }
     }
 
