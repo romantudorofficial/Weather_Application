@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weather Application
+
+### Author: Tudor Gălățan
+
+![The General Look of the Application][photograph]
+
+[photograph]: general_look.png
+
 
 ## Available Scripts
 
