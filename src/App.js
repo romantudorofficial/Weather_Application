@@ -1,4 +1,4 @@
-// Import React and MetaTags
+// Import React
 import React from 'react';
 
 // Import the Frame Component
