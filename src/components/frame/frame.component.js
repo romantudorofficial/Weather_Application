@@ -12,7 +12,7 @@ import Button from '../button/button.component';
 import './frame.component.scss';
 
 // Import the FontAwesome Icons
-import {faWind, faCloudRain, faCloud, faSun, faSnowflake, faGrinStars} from '@fortawesome/free-solid-svg-icons';
+import {faWind, faCloudRain, faCloud, faSun, faSnowflake, faSmog, faGrinStars} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -51,15 +51,17 @@ class Frame extends Component
 
     getDate = () =>
     {
-        let date, day, month, year, hours, minutes, seconds;
-        date = new Date ();
-        day = String (date.getDate()).padStart(2, '0');
-        month = String (date.getMonth() + 1).padStart(2, '0');
-        year = date.getFullYear();
-        hours = String (date.getHours()).padStart(2, '0');
-        minutes = String (date.getMinutes()).padStart(2, '0');
-        seconds = String (date.getSeconds()).padStart(2, '0');
-        date = day + '/' + month + '/' + year + ', ' + hours + ':' + minutes + ':' + seconds;
+        let date, timezone, day, month, year, hours, minutes, seconds;
+        date = new Date();
+        timezone = this.state.data.timezone;
+        date.setUTCSeconds(date.getUTCSeconds() + timezone);
+        day = String (date.getUTCDate()).padStart(2, '0');
+        month = String (date.getUTCMonth() + 1).padStart(2, '0');
+        year = date.getUTCFullYear();
+        hours = String (date.getUTCHours()).padStart(2, '0');
+        minutes = String (date.getUTCMinutes()).padStart(2, '0');
+        seconds = String (date.getUTCSeconds()).padStart(2, '0');
+        date = day + '/' + month + '/' + year + ', ' + hours + ':' + minutes;
         return date;
     }
 
@@ -78,7 +80,6 @@ class Frame extends Component
             temperature_min = Math.floor(this.state.data.main.temp_min);
             wind_speed = this.state.data.wind.speed;
             date = this.getDate();
-
             temperature_max_string = temperature_max.toString();
             temperature_min_string = temperature_min.toString();
             temperature_max_length = temperature_max_string.length;
@@ -92,14 +93,17 @@ class Frame extends Component
             case "Clear":
                 icon = faSun;
                 break;
-            case "Clouds":
+            case "Clouds" || "Squall":
                 icon = faCloud;
                 break;
             case "Snow":
                 icon = faSnowflake;
                 break;
-            case "Rain":
+            case "Rain" || "Thunderstorm" || "Drizzle":
                 icon = faCloudRain;
+                break;
+            case "Haze" || "Smoke" || "Mist" || "Dust" || "Fog" || "Sand" || "Ash" || "Tornado":
+                icon = faSmog;
                 break;
             default:
                 icon = faGrinStars;
