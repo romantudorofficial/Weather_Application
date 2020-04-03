@@ -7,10 +7,10 @@
 
 .city
 {
-    font-size: 40px;
+    font-size: 300%;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 8px;
+    margin-top: 1%;
+    margin-bottom: 3%;
     letter-spacing: 3px;
 }
 
@@ -18,16 +18,50 @@
 
 .wind_speed_text
 {
-    font-size: 30px;
-    margin-top: 90px;
-    margin-left: 40px;
-    margin-bottom: 15px;
+    margin-left: 5%;
+    margin-bottom: 2%;
+
+    @media screen and (max-width: 480px)
+    {
+        margin-top: 2%;
+        font-size: 100%;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px)
+    {
+        margin-top: 3%;
+        font-size: 140%;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px)
+    {
+        margin-top: 5%;
+        font-size: 160%;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1500px)
+    {
+        margin-top: 10%;
+        font-size: 200%;
+    }
+
+    @media screen and (min-width: 1501px) and (max-width: 1900px)
+    {
+        margin-top: 15%;
+        font-size: 220%;
+    }
+
+    @media screen and (min-width: 1901px)
+    {
+        margin-top: 20%;
+        font-size: 250%;
+    }
 }
 
 
 
 .degree_celsius
 {
-    font-size: 28px;
-    margin-left: 8px;
+    font-size: 170%;
+    margin-left: 20%;
 }

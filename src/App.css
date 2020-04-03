@@ -1,7 +1,57 @@
 .frame
 {
-    height: 800px;
-    width: 440px;
+    width: 24%;
+    height: 90vh;
     margin: auto;
-    margin-top: 69px;
+    margin-top: 4.4vh;
+}
+
+
+
+@media screen and (max-width: 480px)
+{
+    .frame
+    {
+        width: 90%;
+    }
+}
+
+
+
+@media screen and (min-width: 481px) and (max-width: 768px)
+{
+    .frame
+    {
+        width: 90%;
+    }
+}
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px)
+{
+    .frame
+    {
+        width: 60%;
+    }
+}
+
+
+
+@media screen and (min-width: 1025px) and (max-width: 1500px)
+{
+    .frame
+    {
+        width: 50%;
+    }
+}
+
+
+
+@media screen and (min-width: 1501px) and (max-width: 1900px)
+{
+    .frame
+    {
+        width: 40%;
+    }
 }
