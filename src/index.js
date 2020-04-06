@@ -4,7 +4,7 @@ import React from 'react';
 // Import React DOM
 import ReactDOM from 'react-dom';
 
-// Import the App Component
+// Import the "App" Component
 import App from './App';
 
 // Other Imports

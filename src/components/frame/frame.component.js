@@ -111,10 +111,11 @@ class Frame extends Component
 
         return (
             <div className = "frame">
+
                 <div className = "cities">
                     <Button city = "Cluj-Napoca" onButtonClick = {this.changeCity} />
                     <Button city = "Vatra Dornei" onButtonClick = {this.changeCity} />
-                    <Button city = "Brodina" onButtonClick = {this.changeCity} />
+                    <Button city = "Philadelphia" onButtonClick = {this.changeCity} />
                     <Button city = "Munich" onButtonClick = {this.changeCity} />
                     <Button city = "Bucharest" onButtonClick = {this.changeCity} />
                     <Button city = "Vienna" onButtonClick = {this.changeCity} />
@@ -122,10 +123,15 @@ class Frame extends Component
                     <Button city = "London" onButtonClick = {this.changeCity} />
                     <Button city = "Moscow" onButtonClick = {this.changeCity} />
                 </div>
+
                 <Text value = {city_name} className = "text city" />
+
                 <Information value = {date} className = "information date" />
+
                 <Image icon = {icon} className = "image sky_image" />
+
                 <Information value = {typeOfWeather} className = "information sky" />
+
                 <div className = "temperatures">
                     <Temperature value = {temperature + "°"} className = "temperature temperature_big" />
                     <div className = "small_temperatures">
@@ -140,11 +146,14 @@ class Frame extends Component
                         </div>
                     </div>
                 </div>
+
                 <Text value = "Wind Speed" className = "text wind_speed_text" />
+
                 <div className = "wind_speed_container">
                     <Image icon = {faWind} className = "image wind_image" />
                     <Information value = {wind_speed} className = "information wind_speed" />
                 </div>
+
             </div>
         );
     }

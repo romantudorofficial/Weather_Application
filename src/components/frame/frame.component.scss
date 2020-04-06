@@ -9,7 +9,9 @@ $border_color: #202022;
 
 .frame
 {
-    background-image: linear-gradient(210deg, $background_color_1 10%, $background_color_2 60%, $background_color_3 100%);
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(210deg, $background_color_1 10%, $background_color_2 60%, $background_color_3 100%);
     border-style: solid;
     border-width: 5px;
     border-radius: 30px;

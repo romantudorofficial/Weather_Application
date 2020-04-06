@@ -1,9 +1,11 @@
 .frame
 {
-    width: 24%;
+    padding: 0px;
+    margin: 0px auto;
+    position: relative;
+    width: 24vw;
     height: 90vh;
-    margin: auto;
-    margin-top: 4.4vh;
+    top: 5vh;
 }
 
 
@@ -12,7 +14,7 @@
 {
     .frame
     {
-        width: 90%;
+        width: 95vw;
     }
 }
 
@@ -22,7 +24,7 @@
 {
     .frame
     {
-        width: 90%;
+        width: 90vw;
     }
 }
 
@@ -32,7 +34,7 @@
 {
     .frame
     {
-        width: 60%;
+        width: 60vw;
     }
 }
 
@@ -42,7 +44,7 @@
 {
     .frame
     {
-        width: 50%;
+        width: 50vw;
     }
 }
 
@@ -52,6 +54,6 @@
 {
     .frame
     {
-        width: 40%;
+        width: 40vw;
     }
 }

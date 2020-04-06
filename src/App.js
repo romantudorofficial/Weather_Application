@@ -1,7 +1,7 @@
 // Import React
 import React from 'react';
 
-// Import the Frame Component
+// Import the "Frame" Component
 import Frame from './components/frame/frame.component';
 
 // Import the Stylesheet
