@@ -1,23 +1,27 @@
+$fontColour: #FFFFFF;
+$effectColour: #000000;
+
+
+
 .image
 {
-    color: white;
-    font-size: 300%;
-    margin-left: 5%;
-    filter: drop-shadow(3px 3px black);
+    padding: 0px;
+    margin: 0px 5%;
+    color: $fontColour;
+    font-size: 5vh;
+    filter: drop-shadow(3px 3px $effectColour);
 }
 
 
 
 .sky_image
 {
-    // transform: rotate(-20deg);
     display: inline-block;
-    margin-right: 5%;
 }
 
 
 
 .wind_image
 {
-    margin-right: 5%;
+    margin-top: 1.5vh;
 }

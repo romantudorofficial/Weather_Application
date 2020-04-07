@@ -1,14 +1,11 @@
-/* IMPORTS */
-
-// React and Component
+// Import "React" and "Component"
 import React, {Component} from 'react';
 
-// The Stylesheet
+// Import the Stylesheet
 import './temperature.component.scss';
 
 
 
-// The Temperature class
 class Temperature extends Component
 {
     render ()
@@ -23,5 +20,4 @@ class Temperature extends Component
 
 
 
-// Export the Class
 export default Temperature;

@@ -1,15 +1,21 @@
+$fontColour: #FFFFFF;
+
+
+
 .temperature
 {
-    color: white;
+    padding: 0px;
+    margin: 0px;
+    color: $fontColour;
 }
 
 
 
 .temperature_big
 {
-    width: 70%;
-    font-size: 1200%;
     margin-left: 5%;
+    width: 70%;
+    font-size: 19vh;
 }
 
 
@@ -17,6 +23,6 @@
 .temperature_small
 {
     width: 30%;
-    font-size: 170%;
+    font-size: 3.2vh;
     text-align: right;
 }

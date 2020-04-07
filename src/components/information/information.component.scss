@@ -1,53 +1,32 @@
+$fontColour: #FFFFFF;
+$textShadow: #000000;
+
+
+
 .information
 {
-    color: white;
+    padding: 0px;
+    margin: 0px;
+    color: $fontColour;
 }
 
 
 
 .date
 {
-    font-size: 120%;
+    margin-top: 2vh;
+    font-size: 2.5vh;
     text-align: center;
     letter-spacing: 1px;
-    text-shadow: 2px 2px black;
-
-    @media screen and (max-width: 480px)
-    {
-        margin-bottom: 3%;
-    }
-
-    @media screen and (min-width: 481px) and (max-width: 768px)
-    {
-        margin-bottom: 10%;
-    }
-
-    @media screen and (min-width: 769px) and (max-width: 1024px)
-    {
-        margin-bottom: 15%;
-    }
-
-    @media screen and (min-width: 1025px) and (max-width: 1500px)
-    {
-        margin-bottom: 15%;
-    }
-
-    @media screen and (min-width: 1501px) and (max-width: 1900px)
-    {
-        margin-bottom: 15%;
-    }
-
-    @media screen and (min-width: 1901px)
-    {
-        margin-bottom: 20%;
-    }
+    text-shadow: 2px 2px $textShadow;
 }
 
 
 
 .sky
 {
-    font-size: 300%;
+    margin-top: 7vh;
+    font-size: 5vh;
     letter-spacing: 1px;
     display: inline-block;
 }
@@ -56,8 +35,8 @@
 
 .wind_speed
 {
-    font-size: 230%;
-    margin-bottom: 5%;
+    margin-top: 1.5vh;
+    font-size: 4.5vh;
 }
 
 

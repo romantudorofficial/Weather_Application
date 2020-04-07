@@ -1,14 +1,11 @@
-/* IMPORTS */
-
-// React and Component
+// Import "React" and "Component"
 import React, {Component} from 'react';
 
-// The Stylesheet
+// Import the Stylesheet
 import './information.component.scss';
 
 
 
-// The Information class
 class Information extends Component
 {
     render ()
@@ -23,5 +20,4 @@ class Information extends Component
 
 
 
-// Export the Class
 export default Information;

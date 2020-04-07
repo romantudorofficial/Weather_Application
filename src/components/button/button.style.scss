@@ -1,5 +1,6 @@
-$buttonFontColour: #FFFFFF;
-$buttonBorderColour: #FFFFFF;
+$backgroundColour: transparent;
+$fontColour: #FFFFFF;
+$borderColour: #FFFFFF;
 $boxShadowColour: rgba(255, 120, 120, 0.8);
 
 
@@ -11,15 +12,15 @@ button
     width: 30.8%;
     height: 2em;
 
-    color: $buttonFontColour;
-    font-size: 90%;
+    color: $fontColour;
+    font-size: 1.7vh;
     letter-spacing: 1px;
     font-weight: bold;
 
-    background-color: transparent;
+    background-color: $backgroundColour;
     border-radius: 10px;
     border-style: solid;
-    border-color: $buttonBorderColour;
+    border-color: $borderColour;
     border-width: 3px;
 }
 

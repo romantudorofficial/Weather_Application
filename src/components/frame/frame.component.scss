@@ -1,9 +1,8 @@
-// Colours
-$background_color: #22425c;
-$background_color_1: rgba(162, 2, 63, 0.8);
-$background_color_2: rgba(231, 62, 68, 0.8);
-$background_color_3: rgba(255, 129, 79, 0.8);
-$border_color: #202022;
+$backgroundColour_1: rgba(162, 2, 63, 0.8);
+$backgroundColour_2: rgba(231, 62, 68, 0.8);
+$backgroundColour_3: rgba(255, 129, 79, 0.8);
+$borderColour: #202022;
+$textShadow: #000000;
 
 
 
@@ -11,17 +10,18 @@ $border_color: #202022;
 {
     padding: 0px;
     margin: 0px;
-    background: linear-gradient(210deg, $background_color_1 10%, $background_color_2 60%, $background_color_3 100%);
+    background: linear-gradient(210deg, $backgroundColour_1 10%, $backgroundColour_2 60%, $backgroundColour_3 100%);
     border-style: solid;
     border-width: 5px;
     border-radius: 30px;
-    border-color: $border_color;
+    border-color: $borderColour;
     font-family: sans-serif;
-    text-shadow: 3px 3px black;
+    text-shadow: 3px 3px $textShadow;
 
     .cities
     {
         margin: 2vh;
+        text-align: center;
     }
 
     .temperatures
@@ -30,7 +30,8 @@ $border_color: #202022;
 
         .small_temperatures
         {
-            margin-top: 10vh;
+            margin-top: 8.5vh;
+            text-align: right;
 
             .small_temperatures_group
             {
@@ -39,7 +40,7 @@ $border_color: #202022;
 
             .temperatures_line
             {
-                width: 120%;
+                width: 8.5vh;
             }
         }
     }

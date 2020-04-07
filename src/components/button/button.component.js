@@ -1,5 +1,7 @@
+// Import "React" and "Component"
 import React, {Component} from 'react';
 
+// Import the stylesheet
 import './button.style.scss';
 
 

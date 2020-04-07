@@ -1,9 +1,7 @@
-/* IMPORTS */
-
-// React and Component
+// Import "React" and "Component"
 import React, {Component} from 'react';
 
-// The Stylesheet
+// Import the Stylesheet
 import './image.component.scss';
 
 // Import FontAwesome
@@ -11,7 +9,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 
 
-// The Iamge class
 class Image extends Component
 {
     render ()
@@ -24,5 +21,4 @@ class Image extends Component
 
 
 
-// Export the Class
 export default Image;

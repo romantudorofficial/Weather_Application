@@ -1,14 +1,11 @@
-/* IMPORTS */
-
-// React and Component
+// Import "React" and "Component"
 import React, {Component} from 'react';
 
-// The Stylesheet
+// Import the Stylesheet
 import './text.component.scss';
 
 
 
-// The Text class
 class Text extends Component
 {
     render ()
@@ -23,5 +20,4 @@ class Text extends Component
 
 
 
-// Export the Class
 export default Text;

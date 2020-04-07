@@ -1,16 +1,21 @@
+$fontColour: #FFFFFF;
+
+
+
 .text
 {
-    color: white;
+    padding: 0px;
+    margin: 0px;
+    color: $fontColour;
 }
 
 
 
 .city
 {
-    font-size: 300%;
+    font-size: 6.5vh;
     text-align: center;
-    margin-top: 1%;
-    margin-bottom: 3%;
+    margin-top: 7vh;
     letter-spacing: 3px;
 }
 
@@ -18,50 +23,15 @@
 
 .wind_speed_text
 {
+    margin-top: 5vh;
     margin-left: 5%;
-    margin-bottom: 2%;
-
-    @media screen and (max-width: 480px)
-    {
-        margin-top: 2%;
-        font-size: 100%;
-    }
-
-    @media screen and (min-width: 481px) and (max-width: 768px)
-    {
-        margin-top: 3%;
-        font-size: 140%;
-    }
-
-    @media screen and (min-width: 769px) and (max-width: 1024px)
-    {
-        margin-top: 5%;
-        font-size: 160%;
-    }
-
-    @media screen and (min-width: 1025px) and (max-width: 1500px)
-    {
-        margin-top: 10%;
-        font-size: 200%;
-    }
-
-    @media screen and (min-width: 1501px) and (max-width: 1900px)
-    {
-        margin-top: 15%;
-        font-size: 220%;
-    }
-
-    @media screen and (min-width: 1901px)
-    {
-        margin-top: 20%;
-        font-size: 250%;
-    }
+    font-size: 5vh;
 }
 
 
 
 .degree_celsius
 {
-    font-size: 170%;
-    margin-left: 20%;
+    font-size: 3.2vh;
+    margin-left: 2vh;
 }
