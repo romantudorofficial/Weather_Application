@@ -113,15 +113,15 @@ class Frame extends Component
             <div className = "frame">
 
                 <div className = "cities">
-                    <Button city = "Cluj-Napoca" onButtonClick = {this.changeCity} />
-                    <Button city = "Vatra Dornei" onButtonClick = {this.changeCity} />
-                    <Button city = "Philadelphia" onButtonClick = {this.changeCity} />
-                    <Button city = "Munich" onButtonClick = {this.changeCity} />
-                    <Button city = "Bucharest" onButtonClick = {this.changeCity} />
-                    <Button city = "Vienna" onButtonClick = {this.changeCity} />
-                    <Button city = "Los Angeles" onButtonClick = {this.changeCity} />
-                    <Button city = "London" onButtonClick = {this.changeCity} />
-                    <Button city = "Moscow" onButtonClick = {this.changeCity} />
+                    <Button city = "Cluj-Napoca" onButtonClick = {this.changeCity} className = "button" />
+                    <Button city = "Vatra Dornei" onButtonClick = {this.changeCity} className = "button" />
+                    <Button city = "Bucharest" onButtonClick = {this.changeCity} className = "button" />
+                    <Button city = "Munich" onButtonClick = {this.changeCity} className = "button" />
+                    <Button city = "Vienna" onButtonClick = {this.changeCity} className = "button" />
+                    <Button city = "Moscow" onButtonClick = {this.changeCity} className = "button" />
+                    <Button city = "Los Angeles" onButtonClick = {this.changeCity} className = "button" />
+                    <Button city = "London" onButtonClick = {this.changeCity} className = "button" />
+                    <Button city = "Philadelphia" onButtonClick = {this.changeCity} className = "button" />
                 </div>
 
                 <Text value = {city_name} className = "text city" />

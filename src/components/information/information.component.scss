@@ -25,10 +25,35 @@ $textShadow: #000000;
 
 .sky
 {
-    margin-top: 7vh;
     font-size: 5vh;
     letter-spacing: 1px;
     display: inline-block;
+    margin-top: 7vh;
+    
+    @media screen and (max-width: 480px)
+    {
+        margin-top: 3vh;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px)
+    {
+        margin-top: 4vh;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px)
+    {
+        margin-top: 5vh;
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1500px)
+    {
+        margin-top: 6vh;
+    }
+
+    @media screen and (min-width: 1501px) and (max-width: 1900px)
+    {
+        margin-top: 7vh;
+    }
 }
 
 
