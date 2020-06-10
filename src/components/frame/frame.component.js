@@ -74,6 +74,10 @@ class Frame extends Component
         if (this.state.checkData)
         {
             city_name = this.state.data.name;
+            if (city_name === "Galati")
+                city_name = "Galați";
+            if (city_name === "Braila")
+                city_name = "Brăila";
             typeOfWeather = this.state.data.weather[0].main;
             temperature = Math.floor(this.state.data.main.temp);
             temperature_max = Math.floor(this.state.data.main.temp_max);
@@ -120,8 +124,8 @@ class Frame extends Component
                     <Button city = "Vienna" onButtonClick = {this.changeCity} className = "button" />
                     <Button city = "Moscow" onButtonClick = {this.changeCity} className = "button" />
                     <Button city = "Los Angeles" onButtonClick = {this.changeCity} className = "button" />
-                    <Button city = "London" onButtonClick = {this.changeCity} className = "button" />
-                    <Button city = "Philadelphia" onButtonClick = {this.changeCity} className = "button" />
+                    <Button city = "Galați" onButtonClick = {this.changeCity} className = "button" />
+                    <Button city = "Brăila" onButtonClick = {this.changeCity} className = "button" />
                 </div>
 
                 <Text value = {city_name} className = "text city" />
